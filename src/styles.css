@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Prompt", serif;
+    color: white;
+}
+
+html {
+    height: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    background-color: black;
+}
+
+.shoe-logo {
+    display: flex;
+    align-items: center;
+    width: 115px;
+    justify-content: space-between;
+}
+
+.cart-logo {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    width: 250px;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul a {
+    padding-bottom: 10px;
+    transition: all .2s ease-in-out;
+}
+
+a:hover {
+    border-bottom: 2px solid red;
+}
+
+img {
+    width: 290px;
+    height: 290px;
+}
+
+.shoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 80px;
+    padding: 15px;
+    padding-bottom: 0;
+    background-color: white;
+    flex-wrap: wrap;
+}
+
+.shoe {
+    margin: 0 8px;
+    margin-bottom: 30px;
+}
+
+.info p {
+    color: black;
+    width: 290px;
+}
+
+.info .name {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.info .price {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.info .description {
+    color: grey;
+}
+
+.btn {
+    width: 290px;
+    margin-top: 13px;
+    height: 40px;
+    background-color: rgb(207, 10, 44);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: rgb(167, 9, 35);;
+}
+
+.outlet {
+    background-color: #EBECED;
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
