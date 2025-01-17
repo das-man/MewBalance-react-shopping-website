@@ -1,34 +1,47 @@
-import React, { useState } from "react";
-import { TbShoe } from "react-icons/tb";
+import React, { useContext, useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
-
+import { Link, NavLink } from "react-router-dom";
+import { Context } from "../context/context";
 
 export default function Nav() {
+  const { invoice } = useContext(Context);
 
+  const changeStyles = ({ isActive }) => {
+    return { color: isActive ? "#CF0A2C" : "white" };
+  };
 
   return (
     <div className="nav">
-      <NavLink to="/" className="shoe-logo">
-        <TbShoe />
+      <Link to="/" className="shoe-logo">
         MewBalance
-      </NavLink>
+      </Link>
 
       <ul>
         <li>
-          <NavLink to="/men">Men</NavLink>
+          <NavLink to="/men" style={changeStyles}>
+            Men
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/women">Women</NavLink>
+          <NavLink to="/women" style={changeStyles}>
+            Women
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/kids">Kids</NavLink>
+          <NavLink to="/kids" style={changeStyles}>
+            Kids
+          </NavLink>
         </li>
       </ul>
 
-      <div className="cart-logo">
-        <FaShoppingCart />
-      </div>
+      <Link to="/cart">
+        <div className="cart-logo">
+          <FaShoppingCart />
+          {invoice.count > 0 && (
+            <div className="cartCount">{invoice.count}</div>
+          )}
+        </div>
+      </Link>
     </div>
   );
 }

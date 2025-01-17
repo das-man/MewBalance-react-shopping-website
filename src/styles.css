@@ -16,6 +16,7 @@ html {
     align-items: center;
     height: 60px;
     background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .shoe-logo {
@@ -29,6 +30,22 @@ html {
     font-size: 20px;
     display: flex;
     align-items: center;
+    position: relative;
+}
+
+.cartCount {
+    position: absolute;
+    bottom: -0.5rem; /* 8px */
+    right: -0.5rem; /* 8px */
+    width: 1rem; /* 16px */
+    height: 1rem; /* 16px */
+    font-size: 0.75rem; /* 12px */
+    background-color: rgb(207, 10, 44); /* Adjust to the specific shade of blue you want */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Fully rounded */
 }
 
 ul {
@@ -47,7 +64,7 @@ ul a {
     transition: all .2s ease-in-out;
 }
 
-a:hover {
+ul a:hover {
     border-bottom: 2px solid red;
 }
 
@@ -103,15 +120,114 @@ img {
     align-items: center;
     cursor: pointer;
     transition: all .2s ease-in-out;
+    user-select: none;
 }
 
 .btn:hover {
     background-color: rgb(167, 9, 35);;
 }
 
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 80px;
+    padding: 25px 0 35px 0;
+    background-color: white;
+    min-height: 50vh;
+    flex-direction: column;
+}
+
+.cartRemind {
+    color: black;
+    font-size: 23px;
+    text-align: center;
+}
+
+.itemInfo {
+    height: 200px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.itemInfo img {
+    width: 200px;
+    height: 200px;
+}
+
+.itemInfoMiddle {
+    flex: 2;
+}
+
+.itemInfoMiddle p {
+    color: black;
+    margin: 0 0 20px 15px;
+}
+
+.itemInfoLast {
+    flex: 0.8;
+}
+
+.itemInfoLast p {
+    color: black;
+}
+
+.cartName {
+    font-weight: bold;
+}
+
+.itemInfoMiddle .cartDesc {
+    font-size: 14px;
+    color: grey;
+    margin-right: 45px;
+}
+
+.itemInfoLast {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.itemInfoLast .cartPrice{
+    font-weight: bold;
+}
+
+.del {
+    font-size: 25px;
+    margin-top: 5px;
+    cursor: pointer;
+    box-sizing: content-box;
+    padding: 5px;
+    border: 2px solid red;
+    border-radius: 30px;
+}
+
+.bot p {
+    color: black;
+    margin: 15px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bot .order {
+    width: 400px;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 .outlet {
     background-color: #EBECED;
     height: 100%;
+    min-height: 100vh;
     padding-top: 5px;
     padding-bottom: 5px;
 }

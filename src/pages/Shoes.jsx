@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../context/context";
 
 export default function Shoes() {
-  const { shoes } = useContext(Context);
+  const { shoes, addToCart } = useContext(Context);
 
   return (
     <div className="shoes">
@@ -17,7 +17,9 @@ export default function Shoes() {
               <p className="description">{shoe.description}</p>
             </div>
 
-            <div className="btn">Add to Cart</div>
+            <div className="btn" onClick={() => addToCart(shoe)}>
+              Add to Cart
+            </div>
           </div>
         );
       })}
