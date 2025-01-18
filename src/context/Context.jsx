@@ -104,7 +104,7 @@ export const ContextProvider = ({ children }) => {
 
   return (
     <Context.Provider
-      value={{ shoes, shoeFilter, addToCart, removeFromCart, invoice, cart }}
+      value={{ shoes, shoeFilter, addToCart, removeFromCart, invoice, cart, setCart }}
     >
       {children}
     </Context.Provider>

@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { Context } from "../context/context";
 import { MdDelete } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export default function Cart() {
-  const { cart, invoice, removeFromCart } = useContext(Context);
+  const { cart, invoice, removeFromCart, setCart } = useContext(Context);
 
   return (
     <div className="cart">
@@ -39,7 +40,9 @@ export default function Cart() {
             <p>
               SubTotal of {invoice.count} items: ${invoice.subTotal}
             </p>
-            <div className="order">Place Order</div>
+            <Link to="/success" onClick={()=>setCart([])}>
+              <div className="order">Place Order</div>
+            </Link>
           </div>
         </>
       )}

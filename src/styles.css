@@ -8,6 +8,7 @@
 
 html {
     height: 100%;
+    background-color: #EBECED;
 }
 
 .nav {
@@ -16,7 +17,7 @@ html {
     align-items: center;
     height: 60px;
     background-color: black;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .shoe-logo {
@@ -131,11 +132,13 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px 80px;
+    margin: auto;
+    margin-top: 15px;
+    width: 80vw;
     padding: 25px 0 35px 0;
     background-color: white;
-    min-height: 50vh;
     flex-direction: column;
+    min-height: 45vh;
 }
 
 .cartRemind {
@@ -224,10 +227,15 @@ img {
     cursor: pointer;
 }
 
-.outlet {
-    background-color: #EBECED;
-    height: 100%;
-    min-height: 100vh;
-    padding-top: 5px;
-    padding-bottom: 5px;
+.success {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    color: black;
+    background-color: white;
+    margin-top: 30px;
+    width: 80vw;
+    height: 40vh;
+    font-size: 20px;
 }

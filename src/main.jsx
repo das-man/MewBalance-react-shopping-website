@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Shoes from "./pages/Shoes";
 import Cart from "./pages/Cart";
+import Success from "./pages/Success";
 
 import { ContextProvider } from "./context/context";
 
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />,
+      },
+      {
+        path: "/success",
+        element: <Success />,
       },
     ],
   }
